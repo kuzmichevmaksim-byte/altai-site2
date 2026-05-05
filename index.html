@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Алтай в июле — тур по местам силы | Телецкое озеро</title>
+  <meta name="description" content="Алтай в июле: тур по местам силы на Телецком озере. Практики, медитации, трансформационная игра Лила, природа и отдых в спокойном ритме." />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --deep: #082638;
+      --blue: #0f4259;
+      --lake: #2b7890;
+      --soft: #eef7f9;
+      --card: #fffdf8;
+      --sand: #eec46a;
+      --text: #17384a;
+      --muted: #5d6d73;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--soft);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, 92%); margin: 0 auto; }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 24px 0;
+      color: #fff;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 21px;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .phone,
+    .nav-tg {
+      padding: 10px 17px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 999px;
+      font-weight: 800;
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-tg {
+      background: rgba(42,171,238,0.85);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 78% 22%, rgba(238,196,106,0.18), transparent 28%),
+        linear-gradient(90deg, rgba(5, 22, 38, 0.82), rgba(5, 22, 38, 0.54), rgba(5, 22, 38, 0.32)),
+        url('images/lake-main.jpg') center/cover;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 128px 0 84px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 120px;
+      background: linear-gradient(to top, var(--soft), transparent);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 830px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 9px 16px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: 0.95;
+      margin-bottom: 24px;
+      max-width: 900px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 700px;
+      margin-bottom: 34px;
+      color: #f5ead8;
+    }
+
+    .hero-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-facts span {
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.24);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 15px;
+      font-weight: 900;
+      transition: 0.25s;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: var(--sand);
+      color: #1b2c24;
+      box-shadow: 0 14px 34px rgba(238,196,106,0.26);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      backdrop-filter: blur(8px);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    section { padding: 86px 0; }
+
+    .section-kicker {
+      color: var(--lake);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      color: var(--text);
+      letter-spacing: -0.8px;
+    }
+
+    .section-text {
+      max-width: 780px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 38px;
+    }
+
+    .intro-grid,
+    .places-grid,
+    .important-grid,
+    .program-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .intro-grid,
+    .important-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .places-grid,
+    .program-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card,
+    .place,
+    .practice,
+    .form-box,
+    .date-box,
+    .quote-box {
+      background: var(--card);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 16px 44px rgba(13, 43, 58, 0.08);
+    }
+
+    .card span,
+    .place span,
+    .practice span {
+      font-size: 34px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .card h3,
+    .place h3,
+    .practice h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .card p,
+    .place p,
+    .practice p {
+      color: #607078;
+    }
+
+    .lake {
+      background: linear-gradient(180deg, #dfecef, #eef7f9);
+    }
+
+    .lake-wrap,
+    .about-wrap,
+    .contact-wrap,
+    .cta-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .image-box {
+      border-radius: 34px;
+      overflow: hidden;
+      min-height: 500px;
+      background:
+        linear-gradient(rgba(5,22,38,0.05), rgba(5,22,38,0.05)),
+        url('images/lake-main.jpg') center/cover;
+      box-shadow: 0 22px 60px rgba(13, 43, 58, 0.18);
+    }
+
+    .list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .list div {
+      background: var(--card);
+      padding: 16px 18px;
+      border-radius: 16px;
+      color: #34483d;
+      font-weight: 800;
+      box-shadow: 0 10px 28px rgba(13, 43, 58, 0.06);
+    }
+
+    .places { background: var(--soft); }
+
+    .highlight {
+      background: var(--card);
+      border-radius: 30px;
+      padding: 34px;
+      margin-top: 34px;
+      border-left: 6px solid #7fb6c8;
+      font-size: 20px;
+      color: #34483d;
+      box-shadow: 0 16px 44px rgba(13, 43, 58, 0.08);
+    }
+
+    .gallery-section {
+      background: linear-gradient(180deg, #eef7f9, #dfecef);
+    }
+
+    .gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .gallery-note {
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(23,56,74,0.08);
+      padding: 14px 18px;
+      border-radius: 18px;
+      color: #4c6570;
+      font-weight: 700;
+      min-width: 230px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 235px;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: 0 16px 38px rgba(13, 43, 58, 0.16);
+      background: #dfecef;
+      cursor: zoom-in;
+      min-height: 0;
+    }
+
+    .gallery-item.big { grid-column: span 2; grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 2; }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease, filter 0.45s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+      filter: brightness(1.04);
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5,22,38,0.58), transparent 58%);
+      opacity: 0.78;
+      transition: opacity 0.35s ease;
+    }
+
+    .gallery-item:hover::after { opacity: 0.92; }
+
+    .gallery-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      z-index: 2;
+      color: #fff;
+      font-weight: 900;
+      font-size: 18px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+    }
+
+    .practices {
+      background:
+        radial-gradient(circle at 80% 10%, rgba(238,196,106,0.14), transparent 28%),
+        linear-gradient(180deg, #17384a, #082638);
+      color: #fff;
+    }
+
+    .practices .section-kicker,
+    .practices .section-title,
+    .practices .section-text {
+      color: #fff;
+    }
+
+    .practice {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      backdrop-filter: blur(8px);
+    }
+
+    .practice h3,
+    .practice p {
+      color: #fff;
+    }
+
+    .cta {
+      background: var(--soft);
+    }
+
+    .quote-box {
+      background:
+        linear-gradient(rgba(255,253,248,0.92), rgba(255,253,248,0.92)),
+        url('images/road.jpg') center/cover;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+
+    .quote-box p {
+      font-size: 26px;
+      line-height: 1.25;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .date-box strong {
+      display: block;
+      font-size: 36px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .date-box p {
+      color: #607078;
+      font-size: 18px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .mini-list span {
+      display: block;
+      background: rgba(43,120,144,0.08);
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(42,171,238,0.18), transparent 30%),
+        linear-gradient(180deg, #0f4259, #082638);
+      color: #fff;
+      padding-bottom: 115px;
+    }
+
+    .contact .section-kicker,
+    .contact .section-title,
+    .contact .section-text {
+      color: #fff;
+    }
+
+    .contacts-list {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+
+    .contacts-list p {
+      margin-bottom: 10px;
+    }
+
+    .form-box {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #d6e3e7;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      font-size: 16px;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    .form-box textarea {
+      min-height: 116px;
+      resize: vertical;
+    }
+
+    .form-hint {
+      margin-top: 12px;
+      color: #607078;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer {
+      padding: 28px 0;
+      background: #061d2b;
+      color: #cbd6cf;
+      text-align: center;
+    }
+
+    .tg-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      height: 60px;
+      padding: 0 22px 0 18px;
+      background: linear-gradient(135deg, #2AABEE, #229ED9);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+      box-shadow: 0 10px 30px rgba(34, 158, 217, 0.38);
+      z-index: 999;
+      transition: 0.3s;
+      animation: tgPulse 1.8s infinite;
+    }
+
+    .tg-button:hover {
+      transform: scale(1.06);
+      box-shadow: 0 14px 42px rgba(34, 158, 217, 0.55);
+      animation-play-state: paused;
+    }
+
+    .tg-icon {
+      width: 34px;
+      height: 34px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .tg-text { white-space: nowrap; }
+
+    @keyframes tgPulse {
+      0% { box-shadow: 0 0 0 0 rgba(34, 158, 217, 0.55), 0 10px 30px rgba(34, 158, 217, 0.38); }
+      70% { box-shadow: 0 0 0 18px rgba(34, 158, 217, 0), 0 10px 30px rgba(34, 158, 217, 0.38); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 158, 217, 0), 0 10px 30px rgba(34, 158, 217, 0.38); }
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(5,22,38,0.92);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+    }
+
+    .lightbox.active { display: flex; }
+
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 22px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.92);
+      color: var(--deep);
+      font-size: 28px;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    @media (max-width: 1100px) {
+      .intro-grid,
+      .important-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .places-grid,
+      .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 245px;
+      }
+    }
+
+    @media (max-width: 960px) {
+      header { padding: 18px 0; }
+      .logo { font-size: 17px; }
+      .phone { display: none; }
+      .hero { min-height: 92vh; padding: 110px 0 60px; }
+      .hero p { font-size: 18px; }
+      section { padding: 62px 0; }
+
+      .intro-grid,
+      .places-grid,
+      .important-grid,
+      .program-grid,
+      .lake-wrap,
+      .about-wrap,
+      .contact-wrap,
+      .cta-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .place,
+      .practice,
+      .form-box,
+      .date-box,
+      .quote-box {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .image-box { min-height: 340px; }
+      .gallery-head { display: block; }
+      .gallery-note { margin-top: 18px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .nav-actions { display: none; }
+      h1 { font-size: 40px; line-height: 1; }
+      .section-title { font-size: 31px; }
+      .section-text { font-size: 16px; margin-bottom: 28px; }
+      .badge { font-size: 14px; padding: 7px 12px; }
+      .buttons { flex-direction: column; }
+      .btn { width: 100%; text-align: center; padding: 14px 18px; }
+      .hero { min-height: 88vh; padding: 96px 0 48px; }
+      .hero p { font-size: 17px; }
+      .hero-facts span { width: 100%; }
+      section { padding: 48px 0; }
+
+      .card span,
+      .place span,
+      .practice span {
+        font-size: 30px;
+      }
+
+      .card h3,
+      .place h3,
+      .practice h3 {
+        font-size: 20px;
+      }
+
+      .list div { font-size: 15px; }
+      .highlight { padding: 22px; font-size: 17px; border-radius: 22px; }
+      .image-box { min-height: 260px; border-radius: 22px; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 270px;
+        gap: 14px;
+      }
+
+      .gallery-item.big,
+      .gallery-item.wide,
+      .gallery-item.tall {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .gallery-caption {
+        font-size: 16px;
+      }
+
+      .date-box strong { font-size: 28px; }
+      .quote-box p { font-size: 22px; }
+      .contacts-list { font-size: 17px; }
+      footer { font-size: 14px; padding: 22px 0; }
+
+      .tg-button {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        width: auto;
+        height: 56px;
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      h1 { font-size: 34px; }
+      .section-title { font-size: 28px; }
+      .hero p { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">АЛТАЙ | МЕСТА СИЛЫ</div>
+      <div class="nav-actions">
+        <a class="phone" href="tel:+79056233047">+7 905 623-30-47</a>
+        <a class="nav-tg" href="https://t.me/irina810k" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="badge">✨ Июль • Алтай • Телецкое озеро</span>
+        <h1>Тур по местам силы на Телецком озере</h1>
+        <p>Путешествие для отдыха, перезагрузки и мягкого соединения с природой Алтая через практики, медитации и живое общение.</p>
+
+        <div class="hero-facts">
+          <span>🌿 без дальних переездов</span>
+          <span>👥 небольшая группа</span>
+          <span>🧘 практики Ирины</span>
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://t.me/irina810k" target="_blank">💬 Забронировать в Telegram</a>
+          <a class="btn btn-secondary" href="#gallery">Смотреть атмосферу</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-kicker">Формат</div>
+        <h2 class="section-title">Спокойный тур без гонки и перегрузки</h2>
+        <p class="section-text">Мы живём в одном красивом месте и исследуем всё вокруг в мягком ритме: природа, практики, прогулки, отдых и внимание к себе.</p>
+
+        <div class="intro-grid">
+          <div class="card"><span>🌿</span><h3>Отдых и перезагрузка</h3><p>Мягкий ритм, тишина, вода, горы и пространство для себя.</p></div>
+          <div class="card"><span>👥</span><h3>Небольшая группа</h3><p>Тёплая атмосфера, внимание каждому участнику и без толпы.</p></div>
+          <div class="card"><span>🧘</span><h3>Практики</h3><p>Медитации, индивидуальная работа и духовные практики Ирины.</p></div>
+          <div class="card"><span>🏔️</span><h3>Места силы</h3><p>Энергетически сильные и сказочно красивые локации Алтая.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lake">
+      <div class="container lake-wrap">
+        <div>
+          <div class="section-kicker">Локация</div>
+          <h2 class="section-title">Телецкое озеро</h2>
+          <p class="section-text">Одно из самых глубоких и чистых озёр России, окружённое горами и тайгой. Здесь легко замедлиться, услышать себя и почувствовать силу природы.</p>
+
+          <div class="list">
+            <div>🚤 Прогулка на катере по Телецкому озеру</div>
+            <div>💧 Водопады Корбу, Киште и Третьей речки</div>
+            <div>🌲 Кедровые леса, бухты и уединённые места</div>
+            <div>⛰ Смотровые точки с панорамами озера</div>
+          </div>
+        </div>
+
+        <div class="image-box" aria-label="Телецкое озеро"></div>
+      </div>
+    </section>
+
+    <section class="places" id="program">
+      <div class="container">
+        <div class="section-kicker">Программа</div>
+        <h2 class="section-title">Локации и впечатления</h2>
+        <p class="section-text">В программе — красивые природные места, мягкие прогулки, практики и живое соприкосновение с Алтаем.</p>
+
+        <div class="places-grid">
+          <div class="place"><span>🌲</span><h3>300-летний кедр</h3><p>Рядом — святой источник преподобного Макария, освящённый в 1830 году.</p></div>
+          <div class="place"><span>⛰</span><h3>Гора Тилан-Туу</h3><p>Одна из лучших смотровых площадок на Телецкое озеро и уютная чайная рядом.</p></div>
+          <div class="place"><span>💧</span><h3>Водопады Третьей речки</h3><p>Экотропа через лес и воду. Красивый маршрут наедине с природой.</p></div>
+          <div class="place"><span>🚠</span><h3>Канатная дорога</h3><p>Подъём с панорамными видами и лёгкие прогулки по экотропе наверху.</p></div>
+          <div class="place"><span>🪨</span><h3>Каменные грибы</h3><p>Уникальное природное место. При доступности можно организовать экскурсию.</p></div>
+          <div class="place"><span>🖼</span><h3>Артыбаш</h3><p>Атмосферная галерея изделий местных мастеров и творческая сторона Алтая.</p></div>
+        </div>
+
+        <div class="highlight">Это путешествие не про спешку. Оно про баланс: практика, отдых, природа, внимание к себе и красота вокруг.</div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="gallery-head">
+          <div>
+            <div class="section-kicker">Фото</div>
+            <h2 class="section-title">Атмосфера путешествия</h2>
+            <p class="section-text">Живые фотографии с Алтая: озеро, горы, прогулки, рафтинг, кони и энергия группы.</p>
+          </div>
+          <div class="gallery-note">Нажмите на фото, чтобы открыть крупнее</div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item big" data-full="images/group-2.jpg">
+            <img src="images/group-2.jpg" alt="Участники тура на Алтае">
+            <div class="gallery-caption">Живая энергия группы</div>
+          </div>
+
+          <div class="gallery-item tall" data-full="images/horses-1.jpg">
+            <img src="images/horses-1.jpg" alt="Конная прогулка на Алтае">
+            <div class="gallery-caption">Конные прогулки</div>
+          </div>
+
+          <div class="gallery-item" data-full="images/rafting-1.jpg">
+            <img src="images/rafting-1.jpg" alt="Рафтинг на Алтае">
+            <div class="gallery-caption">Рафтинг и эмоции</div>
+          </div>
+
+          <div class="gallery-item" data-full="images/group-1.jpg">
+            <img src="images/group-1.jpg" alt="Группа в горах Алтая">
+            <div class="gallery-caption">Малые группы</div>
+          </div>
+
+          <div class="gallery-item wide" data-full="images/lake-main.jpg">
+            <img src="images/lake-main.jpg" alt="Телецкое озеро">
+            <div class="gallery-caption">Телецкое озеро</div>
+          </div>
+
+          <div class="gallery-item" data-full="images/rafting-2.jpg">
+            <img src="images/rafting-2.jpg" alt="Группа на рафтинге">
+            <div class="gallery-caption">Вода и драйв</div>
+          </div>
+
+          <div class="gallery-item" data-full="images/road.jpg">
+            <img src="images/road.jpg" alt="Горная дорога Алтая">
+            <div class="gallery-caption">Горные дороги</div>
+          </div>
+
+          <div class="gallery-item wide" data-full="images/rafting-3.jpg">
+            <img src="images/rafting-3.jpg" alt="Рафтинг на фоне гор">
+            <div class="gallery-caption">Алтайские пейзажи</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="practices">
+      <div class="container">
+        <div class="section-kicker">Практики</div>
+        <h2 class="section-title">Мягкая внутренняя перезагрузка</h2>
+        <p class="section-text">Программа создана для глубокого контакта с собой и природой.</p>
+
+        <div class="program-grid">
+          <div class="practice"><span>✨</span><h3>Духовные практики Ирины</h3><p>Практики, медитации и работа в местах силы Алтая.</p></div>
+          <div class="practice"><span>💫</span><h3>Индивидуальная работа</h3><p>Внимание к каждому участнику и личный формат взаимодействия.</p></div>
+          <div class="practice"><span>🎲</span><h3>Игра «Лила»</h3><p>Трансформационная игра для осознаний, вопросов и внутреннего движения.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-wrap">
+        <div class="quote-box">
+          <p>Алтай — это не просто поездка. Это состояние, в которое хочется вернуться.</p>
+        </div>
+
+        <div class="date-box">
+          <div class="section-kicker">Бронирование</div>
+          <strong>Июль 2026</strong>
+          <p>Алтай, Телецкое озеро. Даты будут объявлены в ближайшее время. Планируется первая половина июля.</p>
+
+          <div class="mini-list">
+            <span>🤍 внимание каждому участнику</span>
+            <span>🌿 баланс: практика / отдых / природа</span>
+            <span>🔥 энергетически сильные места</span>
+          </div>
+
+          <a class="btn btn-primary" href="https://t.me/irina810k" target="_blank">💬 Узнать даты и условия</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-wrap">
+        <div>
+          <div class="section-kicker">Контакты</div>
+          <h2 class="section-title">Напишите Ирине в Telegram</h2>
+          <p class="section-text">Узнайте даты, стоимость, условия участия и забронируйте место в группе.</p>
+
+          <div class="contacts-list">
+            <p>📞 <a href="tel:+79056233047">+7 905 623-30-47</a></p>
+            <p>💫 Ирина Кузьмичева — организатор</p>
+            <p>📍 Алтай | Телецкое озеро</p>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h3 style="font-size: 25px; margin-bottom: 10px;">Быстрая заявка</h3>
+          <p style="color:#607078; margin-bottom:18px;">Кнопка откроет Telegram — напишите, что хотите узнать даты и стоимость тура.</p>
+          <a class="btn btn-primary" style="width:100%;" href="https://t.me/irina810k" target="_blank">💬 Написать в Telegram</a>
+          <div class="form-hint">Telegram: @irina810k</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Алтай | Места силы. Тур на Телецкое озеро с Ириной Кузьмичевой.</div>
+  </footer>
+
+  <a href="https://t.me/irina810k" class="tg-button" target="_blank">
+    <span class="tg-icon">✈️</span>
+    <span class="tg-text">Написать в Telegram</span>
+  </a>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" type="button" aria-label="Закрыть">×</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.dataset.full;
+        lightbox.classList.add('active');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
